@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Entry form</title>
+</head>
+<body>
+  <form action="https://mate-academy-form-lesson.herokuapp.com/create-application" method="post">
+    <fieldset>
+      <legend>
+        Personal Information:
+      </legend>
+      <div>
+        <label>
+          Surname: <input type="text" name="surname" minlength="3" maxlength="15" required>
+        </label>
+        <label>
+          Name: <input type="text" name="firstname" minlength="3" maxlength="15" required>
+        </label>
+        <label>
+          How old are you?: <input type="number" min="1" max="100" name="years">
+        </label>
+        <label>
+          Full date of birth: <input type="date" name="birth">
+        </label>
+        <label>
+          I accept the terms of the agreement <input type="checkbox" name="check">
+        </label>
+      </div>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>
+        Registration
+      </legend>
+      <div>
+        <label>
+          E-mail <input type="email" name="mail" autocomplete="on">
+        </label>
+        <label>
+          Password <input type="password" name="pass">
+        </label>
+      </div>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>
+        An interesting fact about you!
+      </legend>
+      <div class="formLine">
+        Do you love cats?
+        <br>
+        <label for="radio1">
+          <input type="radio" name="animal" id="radio1" checked>
+          Yes
+        </label>
+        <label for="radio2">
+          <input type="radio" name="animal" id="radio2">
+          No
+        </label>
+        <p>What is your favorite color?</p>
+        <label>
+          <input type="color" value="#000000" name="color1">
+        </label>
+        <p>What time do you go to bed?</p>
+        <label>
+          <input type="time" name="sleeptime">
+        </label>
+        <p>What your favorite brand of cars?</p>
+        <label>
+          <select name="cars" multiple>
+            <option value="BMW">
+              BMW
+            </option>
+            <option value="Audi">
+              Audi
+            </option>
+            <option value="Lada">
+              Lada
+            </option>
+          </select>
+        </label>
+        <p>How do you rate our work?</p>
+        <label>
+          <input type="range" min="1" max="100" value="40">
+        </label>
+      </div>
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>
+        Your comments:
+      </legend>
+      <div>
+        <label>
+          <textarea name="notes" cols="30" rows="5" placeholder="Comments"></textarea>
+        </label>
+      </div>
+    </fieldset>
+    <br>
+    <button>Submit</button>
+  </form>
+</body>
+</html>
